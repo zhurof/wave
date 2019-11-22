@@ -1,1 +1,212 @@
-﻿
+﻿/*ROBOTO*/
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Thin'), local('Roboto-Thin'),
+			url('../fonts/roboto/Roboto-Thin.woff2') format('woff2'),
+			url('../fonts/roboto/Roboto-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Light'), local('Roboto-Light'),
+			url('../fonts/roboto/Roboto-Light.woff2') format('woff2'),
+			url('../fonts/roboto/Roboto-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto'), local('Roboto-Regular'),
+			url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+			url('../fonts/roboto/Roboto-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Medium'), local('Roboto-Medium'),
+			url('../fonts/roboto/Roboto-Medium.woff2') format('woff2'),
+			url('../fonts/roboto/Roboto-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Bold'), local('Roboto-Bold'),
+			url('../fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+			url('../fonts/roboto/Roboto-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Black'), local('Roboto-Black'),
+			url('../fonts/roboto/Roboto-Black.woff2') format('woff2'),
+			url('../fonts/roboto/Roboto-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Condensed Light Regular'), local('RobotoCondensed-Light'),
+			url('../fonts/roboto/RobotoCondensed-Light.woff2') format('woff2'),
+			url('../fonts/roboto/RobotoCondensed-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: condensed;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'),
+			url('../fonts/roboto/RobotoCondensed-Regular.woff2') format('woff2'),
+			url('../fonts/roboto/RobotoCondensed-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: condensed;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
+			url('../fonts/roboto/RobotoCondensed-Bold.woff2') format('woff2'),
+			url('../fonts/roboto/RobotoCondensed-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: condensed;
+	font-display: swap;
+}
+/*OPEN SANS*/
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans Light'), local('OpenSans-Light'),
+			url('../fonts/open-sans/OpenSans-Light.woff2') format('woff2'),
+			url('../fonts/open-sans/OpenSans-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans'), local('OpenSans'),
+			url('../fonts/open-sans/OpenSans-Regular.woff2') format('woff2'),
+			url('../fonts/open-sans/OpenSans-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans Semibold'), local('OpenSans-Semibold'),
+			url('../fonts/open-sans/OpenSans-Semibold.woff2') format('woff2'),
+			url('../fonts/open-sans/OpenSans-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans Bold'), local('OpenSans-Bold'),
+			url('../fonts/open-sans/OpenSans-Bold.woff2') format('woff2'),
+			url('../fonts/open-sans/OpenSans-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'),
+			url('../fonts/open-sans/OpenSans-Extrabold.woff2') format('woff2'),
+			url('../fonts/open-sans/OpenSans-Extrabold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+/*Иконочный шрифт*/
+@font-face {
+  font-family: 'icomoon';
+  src:
+    url('../fonts/icomoon/icomoon.ttf?kcnse5') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?kcnse5') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?kcnse5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-angle-down:before {
+  content: "\e900";
+}
+.icon-angle-left:before {
+  content: "\e901";
+}
+.icon-angle-right:before {
+  content: "\e902";
+}
+.icon-angle-up:before {
+  content: "\e903";
+}
+.icon-basket:before {
+  content: "\e904";
+}
+.icon-box:before {
+  content: "\e905";
+}
+.icon-card:before {
+  content: "\e906";
+}
+.icon-cart:before {
+  content: "\e907";
+}
+.icon-check:before {
+  content: "\e908";
+}
+.icon-clock:before {
+  content: "\e909";
+}
+.icon-close:before {
+  content: "\e90a";
+}
+.icon-envelope:before {
+  content: "\e90b";
+}
+.icon-help:before {
+  content: "\e90c";
+}
+.icon-magnify:before {
+  content: "\e90d";
+}
+.icon-map-marker:before {
+  content: "\e90e";
+}
+.icon-phone:before {
+  content: "\e90f";
+}
+.icon-play:before {
+  content: "\e910";
+}
+.icon-play-circle:before {
+  content: "\e911";
+}
+.icon-van:before {
+  content: "\e912";
+}

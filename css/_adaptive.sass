@@ -1,4 +1,62 @@
-﻿@media(max-width:1199px)
+﻿@media(min-width: 991px)
+	.btn
+		transition: all .2s ease
+		&:hover
+			background-color: $blue
+			color: #fff
+			clip-path: polygon(0 0,30px 0,30px 0,30px 0,30px 0,100% 0,100% 100%,0 100%)
+		&--white:hover
+			border-color: $blue-metalic
+			background-color: $blue-metalic
+	.header
+		&__menu
+			>li
+				position: relative
+				>a
+					transition: all .3s ease
+				>ul
+					position: absolute
+					z-index: 2
+					top: 100%
+					left: -15px
+					border-top: 1px solid rgba(151,151,151,.1)
+					background-color: #fff
+					border-radius: 0 0 10px 10px
+					box-shadow: -1px 12px 14px rgba(0, 0, 0, 0.224213)
+					width: 218px
+					overflow: hidden
+					>li>a
+						display: block
+						padding: 11px 12px
+						transition: all .3s ease
+						color: inherit
+						&:hover
+							background-color: #F4F4F4
+				&:hover
+					>a
+						color: $lightblue
+					>ul
+						display: block
+				
+		&__cart
+			transition: all .3s ease
+			&:hover
+				color: $lightblue
+		&__info
+			&-triger
+				transition: all .3s ease
+			&:hover &-trigger
+				color: $lightblue
+		&__phone
+			transition: all .3s ease
+			&:hover
+				color: $lightblue
+		&__search-btn
+			transition: all .3s ease
+			&:hover
+				color: $lightblue
+			
+@media(max-width: 1199px)
 	.wrapper
 		max-width: 992px
   

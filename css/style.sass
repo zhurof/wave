@@ -1,4 +1,7 @@
-﻿=placeholder($color)
+﻿$blue: #4F8AD1
+$blue-metalic: #87BEEB
+$lightblue: #00A0E3
+=placeholder($color)
 	&::-webkit-input-placeholder 
 		color: $color
 	&::-moz-placeholder 
@@ -36,6 +39,7 @@ body
 	display: flex
 	flex-direction: column
 	min-height: 100vh
+	font: normal normal 16px/1.25 'Open Sans',sans-serif
 
 header,footer
 	flex: 0 0 auto
@@ -47,9 +51,14 @@ img,
 iframe,
 video
 	max-width: 100%
+	user-select: none
 
 a img
 	border: none
+	
+a
+	color: $blue
+	text-decoration: none
 
 p
 	margin: 0 0 1em
@@ -98,11 +107,52 @@ button,
 [type=reset],
 [type=image]
 	cursor: pointer
-
+	user-select: none
+.btn
+	display: inline-block
+	font: normal bold 16px/43px Roboto,sans-serif
+	background: none
+	color: $blue
+	border-radius: 5px
+	border: 2px solid $blue
+	padding: 0 22px
+	user-select: none
+	clip-path: polygon(0 0,24px 0,24px 2px,36px 2px,36px 0,100% 0,100% 100%,0 100%)
+	white-space: nowrap
+	overflow: hidden
+	max-width: 100%
+	text-overflow: ellipsis
+	-webkit-tap-highlight-color: transparent
+	&:active
+		background-color: $blue
+		color: #fff
+		clip-path: polygon(0 0,30px 0,30px 0,30px 0,30px 0,100% 0,100% 100%,0 100%)
+	&--white
+		color: #fff
+		border-color: #fff
+		&:active
+			border-color: $blue-metalic
+			background-color: $blue-metalic
+	&--block
+		display: block
+		width: 100%
+		padding: 0 10px
 /*заголовки*/
 h1,h2,h3,h4,h5,h6
 	margin: 0 0 1em
-
+	font-family: Roboto,sans-serif
+	font-weight: inherit
+h1,h2
+	font-size: 34px
+	line-height: 40/34*1
+	font-weight: 400
+h3
+	font-size: 26px
+h4,h5,h6
+	font-size: inherit
+h6
+	text-transform: uppercase
+	color: $blue
 /*списки*/
 ul,ol
 	margin: 0 0 1em
@@ -110,13 +160,130 @@ ul,ol
 /*таблицы*/
 /*контейнеры*/
 .wrapper
-	max-width: 1200px
+	max-width: 1220px
 	margin: 0 auto
-	padding: 0 15px
+	padding: 0 20px
 
 /*ШАПКА*/
+.logo
+	display: inline-block
+	img
+		display: block
+		width: 100%
+.header
+	background-color: #fff
+	position: relative
+	border-bottom: 1px solid rgba(151,151,151,.1)
+	font-family: Roboto,sans-serif
+	color: #111
+	&__wrapper
+		display: flex
+		align-items: center
+		position: relative
+	&__logo
+		margin: 0 5px 0 0
+	&__menu
+		+unlist
+		display: flex
+		ul
+			+unlist
+			display: none
+		>li
+			display: inline-block
+			>a
+				display: block
+				color: inherit
+				letter-spacing: .04em
+				padding: 20px 15px 
+				&:not(:only-child)
+					&:after
+						content: '\e900'
+						font: normal normal .625em/normal icomoon
+						opacity: .5
+						display: inline-block
+						margin-left: 1em
+	&__phone
+		display: inline-block
+		font-size: 20px
+		line-height: 60px
+		white-space: nowrap
+		color: inherit
+		margin: 0 0 0 auto
+		padding: 0 13px
+		letter-spacing: 0.8/20*1em
+	&__search-btn
+		display: inline-block
+		cursor: pointer
+		font-size: 24px
+		line-height: 60px
+		width: 1.8em
+		text-align: center
+	&__info
+		&-trigger
+			display: inline-block
+			font-size: 22px
+			line-height: 60px
+			width: 1.7em
+			text-align: center
+			cursor: pointer
+			&--active
+				color: $lightblue
+		&-body
+			display: none
+			position: absolute
+			right: 20px
+			top: 100%
+			z-index: 2
+			width: 226px
+			line-height: 22/16*1
+			padding: 11px 22px 37px
+			box-shadow: -1px 12px 14px rgba(0, 0, 0, 0.224213)
+			border-radius: 0 0 10px 10px
+			background-color: #fff
+			border-top: 1px solid rgba(151,151,151,.1)
+			strong
+				display: block
+	&__cart
+		display: inline-block
+		position: relative
+		font-size: 25px
+		line-height: 60px
+		color: inherit
+		width: 1.5em
+		text-align: center
+		&[data-amount]:after
+			content: attr(data-amount)
+			display: inline-block
+			position: absolute
+			width: 16px
+			height: 16px
+			background-color: $blue
+			border-radius: 50%
+			text-align: center
+			font: normal bold 9px/16px Roboto,sans-serif
+			color: #fff
+			top: 50%
+			right: 0
+						
 
 /*ОСНОВНОЕ СОДЕРЖИМОЕ*/
+.banner
+	font-size: 20px
+	font-family: Roboto,sans-serif
+	text-align: center
+	color: #333
+	padding: 10px 0
+	background: url(../img/banner.jpg) no-repeat center/cover
+	position: relative
+	user-select: none
+	&__remove-btn
+		font-size: 15px
+		line-height: 1
+		display: inline-block
+		cursor: pointer
+		position: absolute
+		top: calc(50% - .5em)
+		left: calc(50% + 574px)
 /*ПОДВАЛ*/
 
 /*АДАПТИВ*/
