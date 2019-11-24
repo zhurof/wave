@@ -1,6 +1,7 @@
 ﻿$blue: #4F8AD1
 $blue-metalic: #87BEEB
 $lightblue: #00A0E3
+$darkblue: #2E5577
 =placeholder($color)
 	&::-webkit-input-placeholder 
 		color: $color
@@ -39,6 +40,7 @@ body
 	display: flex
 	flex-direction: column
 	min-height: 100vh
+	min-width: 420px
 	font: normal normal 16px/1.25 'Open Sans',sans-serif
 
 header,footer
@@ -61,7 +63,7 @@ a
 	text-decoration: none
 
 p
-	margin: 0 0 1em
+	margin: 0 0 1.25em
 	&:last-child
 		margin: 0
 
@@ -80,6 +82,24 @@ textarea
 	resize: none
 	overflow: auto
 	
+[type=text],
+[type=tel],
+[type=email],
+[type=url],
+[type=password],
+[type=search],
+textarea
+	display: block
+	width: 100%
+	border: 2px solid #dedede
+	border-radius: 10px
+	letter-spacing: .24/16*1em
+	padding: 12px 20px
+	margin: 0 0 20px
+	line-height: normal
+	&:last-child
+		margin-bottom: 0
+	
 //select
 	appearance: none
 	padding: 10.5px 40px 10.5px 20px
@@ -87,7 +107,7 @@ textarea
 	&::-ms-expand
 		display: none
 		
-//[type=search]
+[type=search]
 	&::-webkit-search-decoration,
 	&::-webkit-search-cancel-button,
 	&::-webkit-search-results-button,
@@ -113,7 +133,7 @@ button,
 	font: normal bold 16px/43px Roboto,sans-serif
 	background: none
 	color: $blue
-	border-radius: 5px
+	border-radius: 10px
 	border: 2px solid $blue
 	padding: 0 22px
 	user-select: none
@@ -148,11 +168,14 @@ h1,h2
 	font-weight: 400
 h3
 	font-size: 26px
+	margin: 0 0 .5em
 h4,h5,h6
 	font-size: inherit
 h6
 	text-transform: uppercase
-	color: $blue
+	color: #9DC8FF
+	letter-spacing: .64/16*1em
+	margin: 0 0 .8em
 /*списки*/
 ul,ol
 	margin: 0 0 1em
@@ -163,6 +186,12 @@ ul,ol
 	max-width: 1220px
 	margin: 0 auto
 	padding: 0 20px
+	&--big
+		max-width: 1366px
+.box
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -10px
 
 /*ШАПКА*/
 .logo
@@ -170,6 +199,32 @@ ul,ol
 	img
 		display: block
 		width: 100%
+.search-form
+	padding: 10px 0
+	background-color: #fff
+	&__wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__input
+		flex: 0 1 calc(100% - 45px)
+		margin: 0
+	&__close
+		display: inline-block
+		line-height: 47px
+		cursor: pointer
+		font-size: 24px
+		width: 1.2em
+		text-align: center
+.menu-btn
+	display: none
+	width: 1.8em
+	text-align: right
+	font: normal 900 24px/60px "Font Awesome 5 Pro"
+	&:before
+		content: '\f0c9'
+	&--active
+		color: $blue
 .header
 	background-color: #fff
 	position: relative
@@ -241,6 +296,10 @@ ul,ol
 			border-radius: 0 0 10px 10px
 			background-color: #fff
 			border-top: 1px solid rgba(151,151,151,.1)
+			p
+				margin: 0 0 .8em
+				&:last-child
+					margin-bottom: 0
 			strong
 				display: block
 	&__cart
@@ -264,15 +323,60 @@ ul,ol
 			color: #fff
 			top: 50%
 			right: 0
-						
-
+	&__search
+		display: none
+		position: absolute
+		top: calc(100% + 1px)
+		left: 0
+		width: 100%
+		z-index: 1
 /*ОСНОВНОЕ СОДЕРЖИМОЕ*/
+.slick
+	&-arrow
+		display: inline-block
+		width: 53px
+		height: 53px
+		color: $blue
+		background-color: #fff
+		border-radius: 50%
+		text-align: center
+		font: normal normal 18px/53px icomoon
+		box-shadow: 0 0 10px rgba(0,0,0,.12)
+		cursor: pointer
+		position: absolute
+		z-index: 2
+		top: calc(50% - 26.5px)
+		transition: all .3s ease
+		opacity: 0
+		&.slick-disabled
+			opacity: 0
+			pointer-events: none
+		&.prev
+			left: 0
+			&:before
+				content: '\e901'
+		&.next
+			right: 0
+			&:before
+				content: '\e902'
+	&-dots
+		+unlist
+		text-align: center
+		>li
+			display: inline-block
+			margin: 5px
+			width: 10px
+			height: 10px
+			border: 1px solid
+			border-radius: 50%
+			&.slick-active
+				background-color: currentColor
 .banner
 	font-size: 20px
 	font-family: Roboto,sans-serif
 	text-align: center
 	color: #333
-	padding: 10px 0
+	padding: 10px 20px
 	background: url(../img/banner.jpg) no-repeat center/cover
 	position: relative
 	user-select: none
@@ -284,7 +388,370 @@ ul,ol
 		position: absolute
 		top: calc(50% - .5em)
 		left: calc(50% + 574px)
+.top-block
+	background-color: $blue
+	color: #fff
+	.slick-track
+		display: flex
+	&__slide
+		background: 
+			size: cover
+			position: center
+			repeat: no-repeat
+		padding: 111px 0 67px
+		&.slick-slide
+			height: auto
+			flex: 1 1 auto
+	&__wrapper
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+	&__text
+		padding: 55px 0 0 28px
+		flex: 0 0 50%		
+		h3
+			font-weight: bold
+			font-size: 44px
+			line-height: 1
+			margin: 0 0 .3em
+		h5
+			font-family: inherit
+			font-size: 20px
+			line-height: 1.5
+			margin: 0 0 1.8em
+			&:last-child
+				margin-bottom: 0
+	&__img
+		width: calc(50% - 20px)
+	&__dots
+		+unlist
+		display: flex
+		background-color: #D7D7D7
+		>li
+			height: 6px
+			flex: 1 1 auto
+			cursor: pointer
+			transition: all .3s ease
+			&.slick-active
+				background-color: $blue
+.catalog
+	padding: 13px 0 10px
+.banner-card
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+	align-items: center
+	padding: 46px 23px 0
+	text-align: center
+	height: 608px
+	margin: 10px
+	width: 428px
+	max-width: 100%
+	overflow: hidden
+	background: 
+		size: cover
+		repeat: no-repeat
+		position: center bottom
+	position: relative
+	&--dark
+		color: #fff
+	&--medium
+		flex-basis: calc(50% - 20px)
+		padding-top: 53px
+	&--big
+		padding-top: 73px
+		height: 677px
+		flex-basis: calc(100% - 20px)
+	&__text
+		flex: 0 0 auto
+	h3
+		font-size: 28px
+		line-height: 36/28*1		
+		margin: 0 0 .3em
+		strong
+			display: block
+	&--medium,
+	&--big
+		h3
+			font-size: 34px
+			line-height: 40/34*1
+	h5
+		font-size: 20px
+		line-height: 1.5
+		margin: 0 0 1.7em
+	&__btn
+		position: relative
+		z-index: 1
+	&__img
+		display: block
+		flex: 0 1 auto
+		max-height: 50%
+		margin: auto
+		&--bottom
+			margin-bottom: 0
+			max-height: 60%
+	&__link
+		+pos
+.event-card
+	width: calc(100% / 3 - 20px)
+	margin: 0 10px 20px
+	position: relative
+	min-height: 304px
+	padding: 105px 160px 60px 40px
+	overflow: hidden
+	&__bg
+		+pos
+		background:
+			size: cover
+			position: right top
+			repeat: no-repeat
+	&__text
+		position: relative
+		z-index: 1
+		font: normal normal 20px/1.4 Roboto,sans-serif
+		h4
+			font-size: 28px
+			line-height: 36/28*1
+			margin: 0 0 .4em
+			strong
+				display: block
+		h5
+			margin: 0
+	&__label
+		position: absolute
+		z-index: 1
+		top: 20px
+		left: 20px
+		border: 1px solid #FA0000
+		border-radius: 5px
+		padding: 0 10px
+		text-align: center
+		font-family: Roboto,sans-serif
+		font-size: 14px
+		line-height: 22/14*1
+		background-color: #EE0000
+		color: #fff
+		user-select: none
+	&__link
+		+pos
+		z-index: 1
+.video
+	position: relative
+	&__tag
+		display: block
+		width: 100%
+		height: 100%
+		+obj
+	&__btn
+		display: inline-block
+		font: normal normal 19px/53px icomoon
+		display: inline-block
+		width: 53px
+		height: 53px
+		border-radius: 50%
+		background-color: #fff
+		position: absolute
+		top: calc(50% - 26.5px)
+		left: calc(50% - 26.5px)
+		text-align: center
+		text-indent: 3px
+		color: $blue
+		cursor: pointer
+		transition: all .3s ease
+		&:before
+			content: '\e910'
+	&--playing &__btn
+		opacity: 0
+		pointer-events: none
+.video-block
+	&__main
+		padding: 30px 0 0
+	&__head
+		text-align: center
+		font-size: 20px
+		margin: 0 0 45px
+		h2
+			margin: 0
+	&__card
+		width: 280px
+		margin: 0 10px
+		padding: 0 0 50px
+		position: relative
+		cursor: pointer
+		font-family: Roboto
+		font-size: 20px
+		line-height: 1.4
+		&:before
+			content: '\e910'
+			font: normal normal 19px/53px icomoon
+			display: inline-block
+			width: 53px
+			height: 53px
+			border-radius: 50%
+			background-color: #fff
+			position: absolute
+			top: 52.5px
+			left: calc(50% - 26.5px)
+			text-align: center
+			text-indent: 3px
+			color: $blue
+		&:nth-last-child(n+5)
+			display: none
+		&--active
+			&:before
+				background-color: $blue
+				color: #fff
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0
+				left: calc(50% - 17px)
+				border-bottom: 20px solid $darkblue
+				border-left: 17px solid transparent
+				border-right: 17px solid transparent
+	&__thumb
+		height: 158px
+		background-color: gray
+		margin: 0 0 10px
+		img
+			display: block
+			width: 100%
+			height: 100%
+			+obj
+	&__content
+		padding: 80px 0
+		background-color: $darkblue
+		color: #fff
+	&__slide
+		width: 780px
+		margin: 0 10px
+		text-align: center
+		font-family: Roboto,sans-serif
+		font-size: 20px
+		line-height: 1.4
+		color: transparent
+		opacity: .2
+		transition: all .3s ease
+		&.slick-center
+			opacity: 1
+			color: inherit
+		&:not(.slick-center)
+			.video__btn
+				opacity: 0
+				pointer-events: none
+	&__item
+		height: 445px
+		margin: 0 0 20px
+	&__item-description
+		max-width: 550px
+		margin: 0 auto
+	&__dots
+		margin: 20px 0 0
+		
+.card
+	width: 251px
+	background-color: #FAF9F9
+	text-align: center
+	margin: 0 10px 20px
+	position: relative
+	padding: 8px 0 36px
+	font-family: Roboto,sans-serif
+	display: flex
+	flex-direction: column
+	&.slick-slide
+		height: auto
+		margin-bottom: 0
+		display: flex
+	img
+		margin: auto
+	&__text
+		padding: 0 26px
+		h3
+			font-size: inherit
+			margin: 0 0 1.1em
+		a
+			display: inline-block
+			position: relative
+			z-index: 2
+	&__link
+		+pos	
+.category-block
+	padding: 80px 0 30px
+	&__head
+		text-align: center
+	&__slider
+		padding-left: calc(50% - 590px)
+		.slick-track
+			display: flex
+	&__arrow
+		&.prev
+			left: calc(50% - 615px)
+		&.next
+			right: calc(50% - 515px)
+.text-block
+	padding: 33px 0
 /*ПОДВАЛ*/
-
+.footer
+	background: url(../img/footer.svg) no-repeat center top/100% 62px,linear-gradient(to bottom,transparent 62px,$darkblue 62px)
+	color: #fff
+	a
+		color: inherit
+	h3
+		font-size: 20px
+		font-weight: bold
+		margin: 0 0 1.1em
+	&__topline
+		padding: 108px 0 25px
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -10px
+	&__column
+		margin: 0 10px
+		flex: 1 1 calc(25% - 20px)
+	&__logo
+		display: block
+		width: 177px
+		margin: 7px 0 22px 7px
+	&__social
+		margin: 0 0 0 12px
+		a
+			display: inline-block
+			width: 2em
+			height: 2em
+			border-radius: 3px 
+			border: 1px solid
+			text-align: center
+			vertical-align: top
+			line-height: calc(2em - 2px)
+			margin: 0 2px 2px
+	&__menu
+		+unlist
+		>li
+			margin: 0 0 1em
+			&:last-child
+				margin-bottom: 0
+	&__author
+		font-family: Roboto,sans-serif
+		font-size: 20px
+		line-height: 1
+		flex: 1 1 100%
+		margin: 0 10px		
+		text-align: right
+		a
+			font-weight: bold
+			text-transform: uppercase
+			font-stretch: condensed
+			letter-spacing: .045em
+	&__bottomline
+		padding: 25px 0 26px
+		border-top: 1px solid rgba(151,151,151,.3)
+		display: flex
+		align-items: baseline
+		justify-content: space-between
+		font-size: 20px
+		font-family: Roboto,sans-serif
+	&__text
+		max-width: calc(50% - 10px)
 /*АДАПТИВ*/
 @import "adaptive"

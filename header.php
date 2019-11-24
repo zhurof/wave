@@ -44,5 +44,12 @@
 				</div>
 			</div>
 			<a href="#" class="header__cart icon-cart" data-amount="10"></a>
+			<span class="menu-btn"></span>
 		</div>
+		<form action="" class="search-form header__search">
+			<div class="wrapper search-form__wrapper">
+				<input type="search" class="search-form__input" placeholder="Что вы ищете?">
+				<span class="icon-close search-form__close"></span>
+			</div>
+		</form>
 	</header>

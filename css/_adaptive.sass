@@ -8,6 +8,14 @@
 		&--white:hover
 			border-color: $blue-metalic
 			background-color: $blue-metalic
+	.slick
+		&-slider:hover &-arrow
+			opacity: 1
+			&.slick-disabled
+				opacity: 0
+		&-arrow:hover
+			background-color: $blue
+			color: #fff
 	.header
 		&__menu
 			>li
@@ -55,16 +63,206 @@
 			transition: all .3s ease
 			&:hover
 				color: $lightblue
+	.search-form
+		&__close
+			transition: all .3s ease
+			&:hover
+				color: $lightblue
+	.banner-card
+		&__img
+			transition: all .5s ease-in-out
+		&:hover &__img
+			transform: scale(1.1)
+	.event-card
+		&__bg
+			transition: all .3s ease-in-out
+		&:hover &__bg
+			transform: scale(1.1)
+	.video-block
+		&__card
+			&:before
+				transition: all .3s ease
+			&:hover:before
+				background-color: $blue
+				color: #fff		
+	.card
+		img
+			transition: all .6s ease
+		&:hover img
+			transform: scale(1.05)
 			
-@media(max-width: 1199px)
+@media(max-width: 1239px)
 	.wrapper
 		max-width: 992px
-  
-//@media(max-width:991px)
-	
-
-//@media(max-width:767px)
-	
+		&--big
+			max-width: 100%
+	.banner
+		&__remove-btn
+			left: auto
+			right: 10px
+	.top-block
+		&__slide
+			padding: 80px 0
+		&__text
+			padding-left: 0
+			h3
+				font-size: 34px
+	.banner-card
+		padding-top: 46px
+		flex-basis: 428px
+		&--big
+			flex-basis: calc(100% - 20px)
+		h3
+			font-size: 28px
+			line-height: 36/28*1
+	.event-card
+		width: calc(50% - 20px)
+		&:nth-child(n+3)
+			display: none
+	.video-block
+		&__nav
+			margin: 0 auto
+			justify-content: center
+			max-width: 760px
+		&__card
+			padding-bottom: 20px
+			&--active:after
+				display: none
+	.category-block
+		padding: 30px 0
+		&__slider
+			padding-left: calc(50% - 476px)
+		&__arrow
+			&.prev
+				left: calc(50% - 490px)
+			&.next
+				right: calc(50% - 355px)
+@media(max-width:991px)
+	.banner
+		display: none
+	.menu-btn
+		display: inline-block
+	.header
+		&__menu
+			position: absolute
+			top: calc(100% + 1px)
+			left: 0
+			width: 100%
+			z-index: 2
+			background-color: #fff
+			display: none
+			text-align: right
+			>li
+				display: block
+				border-bottom: 1px solid rgba(151, 151, 151, 0.1)
+				>a
+					padding: 10px 20px
+					&:not(:only-child):after
+						display: none
+			&--open
+				display: block
+		&__info-body
+			right: 0
+			border-bottom-right-radius: 0
+	.top-block
+		&__slide
+			padding: 35px 0
+		&__wrapper
+			display: block
+		&__text
+			max-width: 680px
+			padding: 0
+			margin: 0 auto 20px
+		&__img
+			width: auto
+			margin-left: auto
+			max-height: 220px
+	.video-block
+		&__content
+			padding: 40px 0 20px
+		&__slide
+			width: 75vw
+			font-size: inherit
+		&__item
+			height: 40vw
+	.category-block
+		&__slider
+			padding-left: 20px
+	.footer
+		background: url(../img/footer.svg) no-repeat center top/100% 4.54vw, linear-gradient(to bottom, transparent 4.2vw, #2E5577 4.2vw)
+		padding-top: 4.54vw
+		h3
+			margin: 0 0 .5em
+		&__topline
+			display: block
+			margin: 0
+			padding: 20px 0 15px
+		&__column
+			margin: 0 0 30px
+		&__logo
+			margin: 0 auto 15px
+		&__social
+			margin: 0
+			text-align: center
+		&__menu
+			columns: 4
+			column-gap: 20px
+		&__author
+			font-size: inherit
+		&__bottomline
+			font-size: inherit
+			padding: 10px 0
+@media(max-width:767px)
+	.header
+		&__phone
+			font-size: 0
+			height: 60px
+			overflow: hidden
+			padding: 0
+			&:before
+				content: '\e90f'
+				display: block
+				font-family: icomoon
+				font-size: 24px
+				width: 1.7em
+				text-align: center
+	.top-block
+		&__text
+			text-align: center
+			h3
+				font-size: 28px
+			h5
+				font-size: 18px
+		&__img
+			margin: auto
+	.banner-card
+		height: auto
+		min-height: 608px
+	.events
+		&__box
+			justify-content: center
+	.event-card
+		width: 420px
+		max-width: 100%
+		&:nth-child(n+3)
+			display: block
+	.video-block
+		&__nav
+			display: none
+		&__item
+			height: auto
+			margin: 0 0 10px
+	.footer
+		&__column
+			&:nth-child(n+2)
+				display: none
+		&__author
+			text-align: center
+		&__bottomline
+			display: block
+			text-align: center
+		&__text
+			max-width: 100%
 
 //@media(max-width:480px)
 	
