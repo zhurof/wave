@@ -104,3 +104,24 @@ $('.category-block__slider').slick({
 		}
 	]
 })
+//Карта
+$('[data-coords]').each(function(){
+	var map = this;
+	ymaps.ready(function(){
+		initMap(map);
+	});
+})
+function initMap(map){
+	var coords = $(map).data('coords').replace(/[^\d\,\.]/g,'').split(',') || [];
+	var myMap = new ymaps.Map(map.id, {
+		center: coords,
+		zoom: 15,
+		controls: []
+	});					
+	myPlacemark = new ymaps.Placemark(coords, 
+		{
+			hintContent: '',
+			balloonContent: ''
+		});
+		myMap.geoObjects.add(myPlacemark);
+}

@@ -691,6 +691,120 @@ ul,ol
 			right: calc(50% - 515px)
 .text-block
 	padding: 33px 0
+.social-link
+	display: inline-block
+	width: 2em
+	height: 2em
+	border-radius: 3px 
+	border: 1px solid
+	text-align: center
+	vertical-align: top
+	line-height: calc(2em - 2px)
+	margin: 0 .125em .125em
+	&--big
+		font-size: 20px
+.single-contact
+	display: flex
+	align-items: flex-start
+	margin: 0 0 26px
+	&:last-child
+		margin-bottom: 0
+	&__icon
+		font-size: 25px
+		width: 1.3em
+		text-align: center
+		margin: 0 15px 0 0
+		flex: 0 0 auto
+		color: #B1B1B1
+	&__text
+		flex: 1 1 calc(100% - 45px)
+		line-height: 1.5
+		h5
+			font: inherit
+			color: #B1B1B1
+			margin: 0 0 5px
+		strong
+			color: #B1B1B1
+			font-weight: bold
+.contacts
+	background-color: #F6F6F6
+	padding: 65px 0 100px
+	h1
+		font-size: 50px
+		line-height: 1
+		margin: 0 0 .22em
+	h3
+		font-weight: bold
+		font-size: 24px
+		line-height: 30/24*1
+	h5
+		font-family: inherit
+	&__head
+		text-align: center
+		font-size: 20px
+		line-height: 1.5
+		margin: 0 0 32px
+	&__body
+		background-color: #fff
+		border-radius: 10px 
+		overflow: hidden
+	&__menu
+		+unlist
+		border-bottom: 2px solid #F6F6F6
+		text-align: center
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		font-family: Roboto,sans-serif
+		>li			
+			margin: 0 18px
+			>a
+				display: block
+				padding: 13.5px 0
+				color: inherit
+				position: relative
+			&.active
+				color: $blue
+				font-weight: bold
+				>a
+					&:after
+						content: ''
+						display: block
+						position: absolute
+						top: 100%
+						left: 0
+						width: 100%
+						border-top: 2px solid $blue
+	&__main
+		display: flex
+		align-items: flex-start
+	&__text
+		flex-basis: 50%
+		padding: 50px 40px 50px 142px
+	&__map
+		flex: 0 0 50%
+		height: 394px
+		background-color: gray
+	&__section
+		border-top: 2px solid #F6F6F6
+		padding: 20px 140px
+	&__info
+		margin: 21px 0 39px
+	&__box
+		align-items: flex-start
+	&__column
+		margin: 0 10px
+		flex-basis: calc(100% / 3 - 20px)
+	&__social
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin: 24px 0 26px
+		h3
+			margin: 0 35px 0 0
+.likely
+	vertical-align: top
+	
 /*ПОДВАЛ*/
 .footer
 	background: url(../img/footer.svg) no-repeat center top/100% 62px,linear-gradient(to bottom,transparent 62px,$darkblue 62px)
@@ -714,17 +828,7 @@ ul,ol
 		width: 177px
 		margin: 7px 0 22px 7px
 	&__social
-		margin: 0 0 0 12px
-		a
-			display: inline-block
-			width: 2em
-			height: 2em
-			border-radius: 3px 
-			border: 1px solid
-			text-align: center
-			vertical-align: top
-			line-height: calc(2em - 2px)
-			margin: 0 2px 2px
+		margin: 0 0 0 12px			
 	&__menu
 		+unlist
 		>li

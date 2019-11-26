@@ -137,6 +137,12 @@
 				left: calc(50% - 490px)
 			&.next
 				right: calc(50% - 355px)
+	.contacts
+		&__section
+			padding-left: 40px
+			padding-right: 40px
+		&__text
+			padding-left: 40px
 @media(max-width:991px)
 	.banner
 		display: none
@@ -188,6 +194,21 @@
 	.category-block
 		&__slider
 			padding-left: 20px
+	.contacts
+		padding: 40px 0
+		h1
+			font-size: 36px
+		h3
+			font-size: 22px
+		&__head
+			font-size: inherit
+		&__main
+			display: block
+		&__text
+			padding: 30px
+		&__section
+			padding-left: 30px
+			padding-right: 30px
 	.footer
 		background: url(../img/footer.svg) no-repeat center top/100% 4.54vw, linear-gradient(to bottom, transparent 4.2vw, #2E5577 4.2vw)
 		padding-top: 4.54vw
@@ -252,6 +273,22 @@
 		&__item
 			height: auto
 			margin: 0 0 10px
+	.contacts
+		padding: 30px 0
+		&__menu
+			display: none
+		&__info
+			margin: 0
+		&__box
+			display: block
+			margin: 0
+		&__column
+			margin: 0 0 20px
+		&__social
+			display: block
+			margin: 0
+			h3
+				margin: 0 0 .5em		
 	.footer
 		&__column
 			&:nth-child(n+2)
@@ -264,5 +301,15 @@
 		&__text
 			max-width: 100%
 
-//@media(max-width:480px)
+@media(max-width:480px)
+	.contacts
+		&__head
+			margin: 0 0 20px
+		&__body
+			margin: 0 -20px
+			border-radius: 0
+		&__text
+			padding: 30px 20px
+		&__section
+			padding: 30px 20px
 	
