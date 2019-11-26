@@ -153,6 +153,14 @@ button,
 		&:active
 			border-color: $blue-metalic
 			background-color: $blue-metalic
+	&--basket
+		font-family: icomoon
+		font-weight: 400
+		font-size: 27px
+		width: 47/27*1em
+		padding: 0
+		&:before
+			content: '\e904'
 	&--block
 		display: block
 		width: 100%
@@ -181,6 +189,23 @@ ul,ol
 	margin: 0 0 1em
 		
 /*таблицы*/
+table
+	width: 100%
+	margin: 0 0 1em
+	line-height: normal
+	&:last-child
+		margin-bottom: 0
+	th
+		text-align: inherit
+	td,th
+		padding: .6em
+		padding-left: 0
+	tbody
+		td,th
+			border-bottom: 1px solid rgba(178,178,178,.3)
+		tr:last-child
+			td,th
+				border-bottom: none
 /*контейнеры*/
 .wrapper
 	max-width: 1220px
@@ -804,6 +829,208 @@ ul,ol
 			margin: 0 35px 0 0
 .likely
 	vertical-align: top
+.good
+	background: url(../img/angle-blot.svg) no-repeat left top,radial-gradient(65.86% 65.86% at 38.14% 36.77%, #FBFBFB 0%, #F6F6F6 100%)
+	padding: 53px 0 133px
+	&__wrapper
+		display: flex
+		align-items: flex-start
+	&__slider
+		width: 635px
+		flex: 0 0 auto
+		display: flex
+		.slick-list
+			background-color: #fff
+			border-radius: 10px
+			order: 1
+			width: calc(100% - 100px)
+	&__slide
+		position: relative
+		&:before
+			content: ''
+			display: block
+			padding-top: 431/535*100%
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			max-width: calc(100% - 20px)
+			max-height: calc(100% - 20px)
+			transform: translate(-50%,-50%)
+	&__dots
+		+unlist
+		flex: 0 0 auto
+		margin-right: 20px
+		>li
+			width: 80px
+			height: 80px
+			position: relative
+			background-color: #fff
+			border-radius: 5px
+			margin: 0 0 8px
+			&:before
+				content: ''
+				+pos
+				border-radius: inherit
+				border: 2px solid $blue
+				clip-path: polygon(0 0,100% 0,100% 7px,0 7px,0 calc(100% - 7px),100% calc(100% - 7px),100% 100%,0 100%)
+				opacity: 0
+				transition: all .3s ease
+			&.slick-active
+				&:before
+					opacity: 1
+			img
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				max-width: calc(100% - 10px)
+				max-height: calc(100% - 10px)				
+	&__text
+		flex: 1 1 calc(100% - 635px)
+		padding: 5px 0 0 63px
+	&__label	
+		display: inline-block
+		color: $blue
+		font: normal normal 14px/22px Roboto,sans-serif
+		border: 1px solid
+		border-radius: 5px
+		padding: 0 9px
+		text-align: center
+		margin: 0 10px 17px 0
+	h1,h2
+		margin: 0 0 .14em 
+		strong
+			display: block
+	&__info
+		padding-bottom: 13px
+		border-bottom: 1px solid #D6D6D6
+		margin: 0 0 39px
+	&__status
+		display: inline-block
+		color: #31AA45
+		font-size: 14px
+		font-family: Roboto,sans-serif
+		margin-right: 23px
+		i
+			font-size: 16/14*1em
+			margin-right: 10px
+	&__id
+		font-family: Roboto,sans-serif
+		font-size: 14px
+		display: inline-block
+	&__cost
+		margin: 0 0 12px
+	&__price
+		display: inline-block
+		font: normal bold 34px/1 Roboto,sans-serif
+		margin-right: 15px
+		&--old
+			color: #bbb
+			font-size: 26px
+			line-height: 34/26*1
+			text-decoration: line-through
+			text-decoration-color: #000
+	&__tools
+		margin: 0 0 38px
+	&__btn
+		vertical-align: top
+		margin-right: 6px
+	&__chars
+		padding-left: 4px
+	&__char
+		display: flex
+		align-items: center
+		max-width: 370px
+		font-family: Roboto
+		font-size: 14px
+		line-height: 18/14*1
+		margin: 0 0 16px
+		&:last-child
+			margin-bottom: 0
+		&-icon
+			font-size: 30px
+			flex: 0 0 auto
+			margin-right: 17px
+		&-text
+			display: block
+			flex: 1 1 auto calc(100% - 47px)
+.tabs
+	position: relative
+	padding: 20px 0
+	&__head
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		text-align: center
+		position: sticky
+		z-index: 2
+		top: 10px
+	&__trigger
+		display: inline-block
+		font: normal normal 16px/47px Roboto,sans-serif
+		padding: 0 20px
+		white-space: nowrap
+		max-width: 100%
+		overflow: hidden
+		text-overflow: ellipsis
+		background-color: #fff
+		border-radius: 10px
+		cursor: pointer
+		transition: box-shadow .3s ease,color .3s ease
+		&--active
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1)
+			color: $blue
+			font-weight: bold
+			position: relative
+			z-index: 1
+	&__item
+		display: none
+.description
+	padding: 30px 0
+	h4
+		font-size: 24px
+		line-height: normal
+		margin: 0 0 .5em
+	&__wrapper
+		display: flex
+		align-items: flex-start
+	&__text
+		line-height: 1.5
+		flex: 1 1 calc(100% - 380px)
+		padding-right: 110px
+	&__sidebar
+		flex: 0 0 380px
+.file-link
+	display: block
+	width: max-content
+	max-width: 100%
+	color: inherit
+	&:before
+		content: '\f15b'
+		font: normal 900 44px/1 "Font Awesome 5 Pro"
+		color: #9DC8FF
+		margin-right: 20px
+		display: inline-block
+		vertical-align: middle
+.chars
+	padding: 30px 0
+	&__item
+		display: flex
+		align-items: flex-start
+		padding: 0 100px
+		margin: 0 0 50px
+		&:last-child
+			margin-bottom: 0
+		h4
+			flex: 0 1 380px
+			font-size: 24px
+			margin: 10px 20px 0 0
+	&__text
+		flex: 0 1 calc(100% - 400px)
+		
+		
 	
 /*ПОДВАЛ*/
 .footer

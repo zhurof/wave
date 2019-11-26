@@ -125,3 +125,19 @@ function initMap(map){
 		});
 		myMap.geoObjects.add(myPlacemark);
 }
+//товар
+$('.good__slider').slick({
+	arrows: false,
+	dots: true,
+	dotsClass: 'good__dots',
+	customPaging: function(slick,i){
+		var image = $(slick.$slides[i]).find('img').clone();
+		return image;
+	}
+})
+//табы
+$('.tabs__trigger').click(function(){
+	var index = $(this).index();
+	$(this).parents('.tabs').find('.tabs__item').hide().eq(index).fadeIn(300);
+	$(this).addClass('tabs__trigger--active').siblings().removeClass('tabs__trigger--active');
+})
