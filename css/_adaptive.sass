@@ -143,6 +143,14 @@
 			padding-right: 40px
 		&__text
 			padding-left: 40px
+	.good
+		&__slider
+			width: 50%
+		&__text
+			padding-left: 40px
+	.description
+		&__text
+			padding-right: 40px
 @media(max-width:991px)
 	.banner
 		display: none
@@ -198,7 +206,7 @@
 		padding: 40px 0
 		h1
 			font-size: 36px
-		h3
+		h4
 			font-size: 22px
 		&__head
 			font-size: inherit
@@ -209,6 +217,28 @@
 		&__section
 			padding-left: 30px
 			padding-right: 30px
+	.good
+		padding: 50px 0
+		&__wrapper
+			display: block
+		&__slider
+			width: auto
+			max-width: 768px
+			margin: 0 0 30px
+		&__text
+			padding-left: 0
+	.description
+		&__wrapper
+			display: block
+		&__text
+			padding-right: 0
+		&__sidebar
+			margin-top: 30px
+	.chars
+		&__item
+			padding: 0
+			h4
+				flex-basis: 40%
 	.footer
 		background: url(../img/footer.svg) no-repeat center top/100% 4.54vw, linear-gradient(to bottom, transparent 4.2vw, #2E5577 4.2vw)
 		padding-top: 4.54vw
@@ -234,6 +264,16 @@
 			font-size: inherit
 			padding: 10px 0
 @media(max-width:767px)
+	h1
+		font-size: 40px
+	h2
+		font-size: 36px
+	h3
+		font-size: 32px
+	h4
+		font-size: 24px
+	h5
+		font-size: 18px
 	.header
 		&__phone
 			font-size: 0
@@ -287,8 +327,20 @@
 		&__social
 			display: block
 			margin: 0
-			h3
-				margin: 0 0 .5em		
+			h4
+				margin: 0 0 .5em
+	.tabs
+		&__head
+			position: static
+			display: block
+			padding: 0 20px
+		&__trigger
+			display: block
+	.chars
+		&__item
+			display: block
+			h4
+				margin: 0 0 .5em
 	.footer
 		&__column
 			&:nth-child(n+2)

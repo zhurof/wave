@@ -8,8 +8,7 @@ $darkblue: #2E5577
 	&::-moz-placeholder 
 		color: $color
 	&:-ms-input-placeholder
-		color: $color
-		
+		color: $color		
 =pos
 	display: block
 	position: absolute
@@ -170,15 +169,18 @@ h1,h2,h3,h4,h5,h6
 	margin: 0 0 1em
 	font-family: Roboto,sans-serif
 	font-weight: inherit
-h1,h2
-	font-size: 34px
-	line-height: 40/34*1
-	font-weight: 400
+h1
+	font-size: 54px
+h2
+	font-size: 50px
 h3
-	font-size: 26px
+	font-size: 34px
 	margin: 0 0 .5em
-h4,h5,h6
-	font-size: inherit
+h4
+	font-size: 28px
+	margin: 0 0 .5em
+h5
+	font-size: 20px
 h6
 	text-transform: uppercase
 	color: #9DC8FF
@@ -423,7 +425,7 @@ table
 			size: cover
 			position: center
 			repeat: no-repeat
-		padding: 111px 0 67px
+		padding: 111px 0 132px
 		&.slick-slide
 			height: auto
 			flex: 1 1 auto
@@ -441,11 +443,12 @@ table
 			margin: 0 0 .3em
 		h5
 			font-family: inherit
-			font-size: 20px
 			line-height: 1.5
 			margin: 0 0 1.8em
 			&:last-child
 				margin-bottom: 0
+		h6
+			font-size: inherit
 	&__img
 		width: calc(50% - 20px)
 	&__dots
@@ -501,7 +504,6 @@ table
 			font-size: 34px
 			line-height: 40/34*1
 	h5
-		font-size: 20px
 		line-height: 1.5
 		margin: 0 0 1.7em
 	&__btn
@@ -535,7 +537,6 @@ table
 		z-index: 1
 		font: normal normal 20px/1.4 Roboto,sans-serif
 		h4
-			font-size: 28px
 			line-height: 36/28*1
 			margin: 0 0 .4em
 			strong
@@ -595,7 +596,7 @@ table
 		text-align: center
 		font-size: 20px
 		margin: 0 0 45px
-		h2
+		h3
 			margin: 0
 	&__card
 		width: 280px
@@ -692,7 +693,7 @@ table
 		margin: auto
 	&__text
 		padding: 0 26px
-		h3
+		h5
 			font-size: inherit
 			margin: 0 0 1.1em
 		a
@@ -758,15 +759,13 @@ table
 		font-size: 50px
 		line-height: 1
 		margin: 0 0 .22em
-	h3
+	h4
 		font-weight: bold
-		font-size: 24px
 		line-height: 30/24*1
 	h5
 		font-family: inherit
 	&__head
 		text-align: center
-		font-size: 20px
 		line-height: 1.5
 		margin: 0 0 32px
 	&__body
@@ -825,7 +824,7 @@ table
 		flex-wrap: wrap
 		align-items: center
 		margin: 24px 0 26px
-		h3
+		h4
 			margin: 0 35px 0 0
 .likely
 	vertical-align: top
@@ -898,7 +897,7 @@ table
 		padding: 0 9px
 		text-align: center
 		margin: 0 10px 17px 0
-	h1,h2
+	h1,h2,h3
 		margin: 0 0 .14em 
 		strong
 			display: block
@@ -990,7 +989,6 @@ table
 .description
 	padding: 30px 0
 	h4
-		font-size: 24px
 		line-height: normal
 		margin: 0 0 .5em
 	&__wrapper

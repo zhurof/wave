@@ -121,7 +121,7 @@
 			<div class="video-block__main">
 				<div class="wrapper">
 					<div class="video-block__head">
-						<h2>Объективные видео <strong>обзоры на устройство</strong></h2>
+						<h3>Объективные видео <strong>обзоры на устройство</strong></h3>
 						<p>Собрали для вас самые лучшие и объективные обзоры от известных блогеров</p>
 					</div>
 					<div class="box video-block__nav">
@@ -188,14 +188,14 @@
 		<div class="category-block">
 			<div class="category-block__head">
 				<div class="wrapper">
-					<h2>Вы уже посмотрели</h2>
+					<h3>Вы уже посмотрели</h3>
 				</div>
 			</div>
 			<div class="category-block__slider">
 				<div class="card">
 					<img src="img/cards/0.png" alt="">
 					<div class="card__text">
-						<h3>W2T – беспороводные наушники-переводчики</h3>
+						<h5>W2T – беспороводные наушники-переводчики</h5>
 						<p><strong>от 39 900 ₽</strong></p>
 					</div>
 					<a href="#" class="card__link"></a>
@@ -203,7 +203,7 @@
 				<div class="card">
 					<img src="img/cards/1.png" alt="">
 					<div class="card__text">
-						<h3>Домашний кинотеатр MagicSee N5 Nova</h3>
+						<h5>Домашний кинотеатр MagicSee N5 Nova</h5>
 						<p><strong>от 45 900 ₽</strong></p>
 					</div>
 					<a href="#" class="card__link"></a>
@@ -211,7 +211,7 @@
 				<div class="card">
 					<img src="img/cards/2.png" alt="">
 					<div class="card__text">
-						<h3>Умные часы Xiaomi AMAZFIT</h3>
+						<h5>Умные часы Xiaomi AMAZFIT</h5>
 						<p><strong>от 9 990 ₽</strong></p>
 					</div>
 					<a href="#" class="card__link"></a>
@@ -219,7 +219,7 @@
 				<div class="card">
 					<img src="img/cards/3.png" alt="">
 					<div class="card__text">
-						<h3>Робот-пылесос Xiaomi Roborock Robot Vacuum Cleaner S5</h3>
+						<h5>Робот-пылесос Xiaomi Roborock Robot Vacuum Cleaner S5</h5>
 						<p><strong>от 78 900 ₽</strong></p>
 					</div>
 					<a href="#" class="card__link"></a>
@@ -227,7 +227,7 @@
 				<div class="card">
 					<img src="img/cards/4.png" alt="">
 					<div class="card__text">
-						<h3>Зубная щетка Oclean X</h3>
+						<h5>Зубная щетка Oclean X</h5>
 						<p><strong>от 39 900 ₽</strong></p>
 					</div>
 					<a href="#" class="card__link"></a>
@@ -235,7 +235,7 @@
 				<div class="card">
 					<img src="img/cards/0.png" alt="">
 					<div class="card__text">
-						<h3>W2T – беспороводные наушники-переводчики</h3>
+						<h5>W2T – беспороводные наушники-переводчики</h5>
 						<p><strong>от 39 900 ₽</strong></p>
 					</div>
 					<a href="#" class="card__link"></a>
@@ -243,7 +243,7 @@
 				<div class="card">
 					<img src="img/cards/2.png" alt="">
 					<div class="card__text">
-						<h3>Умные часы Xiaomi AMAZFIT</h3>
+						<h5>Умные часы Xiaomi AMAZFIT</h5>
 						<p><strong>от 9 990 ₽</strong></p>
 					</div>
 					<a href="#" class="card__link"></a>
@@ -251,7 +251,7 @@
 				<div class="card">
 					<img src="img/cards/3.png" alt="">
 					<div class="card__text">
-						<h3>Робот-пылесос Xiaomi Roborock Robot Vacuum Cleaner S5</h3>
+						<h5>Робот-пылесос Xiaomi Roborock Robot Vacuum Cleaner S5</h5>
 						<p><strong>от 78 900 ₽</strong></p>
 					</div>
 					<a href="#" class="card__link"></a>
@@ -260,7 +260,7 @@
 		</div>
 		<div class="text-block">
 			<div class="wrapper">
-				<h3>Сео заголовок, содержащий ключевой запрос</h3>
+				<h4>Сео заголовок, содержащий ключевой запрос</h4>
 				<p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, даже всемогущая пунктуация не имеет вem ipsum решила выйти в большой мир грамматики. </p>
 				<p>На заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный риторический вопрос скатился по его щеке и он продолжил свой путь. </p>
 			</div>

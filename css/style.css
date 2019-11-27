@@ -184,19 +184,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-h1, h2 {
-  font-size: 34px;
-  line-height: 1.1764705882;
-  font-weight: 400;
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 50px;
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 34px;
   margin: 0 0 0.5em;
 }
 
-h4, h5, h6 {
-  font-size: inherit;
+h4 {
+  font-size: 28px;
+  margin: 0 0 0.5em;
+}
+
+h5 {
+  font-size: 20px;
 }
 
 h6 {
@@ -529,7 +536,7 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 111px 0 67px;
+  padding: 111px 0 132px;
 }
 .top-block__slide.slick-slide {
   height: auto;
@@ -562,12 +569,14 @@ table tbody tr:last-child td, table tbody tr:last-child th {
 }
 .top-block__text h5 {
   font-family: inherit;
-  font-size: 20px;
   line-height: 1.5;
   margin: 0 0 1.8em;
 }
 .top-block__text h5:last-child {
   margin-bottom: 0;
+}
+.top-block__text h6 {
+  font-size: inherit;
 }
 .top-block__img {
   width: calc(50% - 20px);
@@ -656,7 +665,6 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   line-height: 1.1764705882;
 }
 .banner-card h5 {
-  font-size: 20px;
   line-height: 1.5;
   margin: 0 0 1.7em;
 }
@@ -710,7 +718,6 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   font: normal normal 20px/1.4 Roboto, sans-serif;
 }
 .event-card__text h4 {
-  font-size: 28px;
   line-height: 1.2857142857;
   margin: 0 0 0.4em;
 }
@@ -795,7 +802,7 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   font-size: 20px;
   margin: 0 0 45px;
 }
-.video-block__head h2 {
+.video-block__head h3 {
   margin: 0;
 }
 .video-block__card {
@@ -920,7 +927,7 @@ table tbody tr:last-child td, table tbody tr:last-child th {
 .card__text {
   padding: 0 26px;
 }
-.card__text h3 {
+.card__text h5 {
   font-size: inherit;
   margin: 0 0 1.1em;
 }
@@ -1025,9 +1032,8 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   line-height: 1;
   margin: 0 0 0.22em;
 }
-.contacts h3 {
+.contacts h4 {
   font-weight: bold;
-  font-size: 24px;
   line-height: 1.25;
 }
 .contacts h5 {
@@ -1035,7 +1041,6 @@ table tbody tr:last-child td, table tbody tr:last-child th {
 }
 .contacts__head {
   text-align: center;
-  font-size: 20px;
   line-height: 1.5;
   margin: 0 0 32px;
 }
@@ -1130,7 +1135,7 @@ table tbody tr:last-child td, table tbody tr:last-child th {
           align-items: center;
   margin: 24px 0 26px;
 }
-.contacts__social h3 {
+.contacts__social h4 {
   margin: 0 35px 0 0;
 }
 
@@ -1245,10 +1250,10 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   text-align: center;
   margin: 0 10px 17px 0;
 }
-.good h1, .good h2 {
+.good h1, .good h2, .good h3 {
   margin: 0 0 0.14em;
 }
-.good h1 strong, .good h2 strong {
+.good h1 strong, .good h2 strong, .good h3 strong {
   display: block;
 }
 .good__info {
@@ -1382,7 +1387,6 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   padding: 30px 0;
 }
 .description h4 {
-  font-size: 24px;
   line-height: normal;
   margin: 0 0 0.5em;
 }
@@ -1750,6 +1754,17 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   .contacts__text {
     padding-left: 40px;
   }
+
+  .good__slider {
+    width: 50%;
+  }
+  .good__text {
+    padding-left: 40px;
+  }
+
+  .description__text {
+    padding-right: 40px;
+  }
 }
 @media(max-width:991px) {
   .banner {
@@ -1826,7 +1841,7 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   .contacts h1 {
     font-size: 36px;
   }
-  .contacts h3 {
+  .contacts h4 {
     font-size: 22px;
   }
   .contacts__head {
@@ -1841,6 +1856,39 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   .contacts__section {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .good {
+    padding: 50px 0;
+  }
+  .good__wrapper {
+    display: block;
+  }
+  .good__slider {
+    width: auto;
+    max-width: 768px;
+    margin: 0 0 30px;
+  }
+  .good__text {
+    padding-left: 0;
+  }
+
+  .description__wrapper {
+    display: block;
+  }
+  .description__text {
+    padding-right: 0;
+  }
+  .description__sidebar {
+    margin-top: 30px;
+  }
+
+  .chars__item {
+    padding: 0;
+  }
+  .chars__item h4 {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
   }
 
   .footer {
@@ -1881,6 +1929,26 @@ table tbody tr:last-child td, table tbody tr:last-child th {
   }
 }
 @media(max-width:767px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
   .header__phone {
     font-size: 0;
     height: 60px;
@@ -1956,7 +2024,23 @@ table tbody tr:last-child td, table tbody tr:last-child th {
     display: block;
     margin: 0;
   }
-  .contacts__social h3 {
+  .contacts__social h4 {
+    margin: 0 0 0.5em;
+  }
+
+  .tabs__head {
+    position: static;
+    display: block;
+    padding: 0 20px;
+  }
+  .tabs__trigger {
+    display: block;
+  }
+
+  .chars__item {
+    display: block;
+  }
+  .chars__item h4 {
     margin: 0 0 0.5em;
   }
 

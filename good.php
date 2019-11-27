@@ -9,7 +9,7 @@
 				</div>
 				<div class="good__text">
 					<span class="good__label">Скидка</span>
-					<h1><strong>W2T – беспороводные</strong> наушники-переводчики</h1>
+					<h3><strong>W2T – беспороводные</strong> наушники-переводчики</h3>
 					<div class="good__info">
 						<span class="good__status"><i class="icon-check"></i> В наличии</span>
 						<span class="good__id">#39173</span>
