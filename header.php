@@ -12,10 +12,13 @@
 	<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+	<? if(basename($_SERVER['REQUEST_URI']) == ''):?>
+	<!--баннер только на главной, чтобы глаза не мозолил-->
 	<div class="banner">
 		<div class="wrapper"><strong>Новогодняя распродажа!</strong> Скидки на все до 70%!</div>
 		<i class="icon-close banner__remove-btn"></i>
 	</div>
+	<? endif;?>
 	<header class="header">
 		<div class="wrapper header__wrapper">
 			<a href="/" class="logo header__logo">

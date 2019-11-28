@@ -137,7 +137,44 @@ $('.good__slider').slick({
 })
 //табы
 $('.tabs__trigger').click(function(){
-	var index = $(this).index();
-	$(this).parents('.tabs').find('.tabs__item').hide().eq(index).fadeIn(300);
+	var index = $(this).index(),
+			tabs = $(this).parents('.tabs'),
+			tabsTop = tabs.offset().top;
+	
+	//переключение
+	tabs.find('.tabs__item').hide().eq(index).fadeIn(300);
 	$(this).addClass('tabs__trigger--active').siblings().removeClass('tabs__trigger--active');
+	//Остановка вложенных видео при переключении
+	tabs.find('video').each(function(){
+		this.pause();
+	})
+	//в табах может быть овердохуя контента, а переключатели с position: sticky поэтому при необходимости крутим в начало
+	console.log(tabs[0].getBoundingClientRect())
+	$('html,body').scrollTop(tabsTop);
+})
+//
+$('.reviews__slider').slick({
+	touchThreshold: 1000,
+	prevArrow: '<span class="slick-arrow prev reviews__arrow" />',
+	nextArrow: '<span class="slick-arrow next reviews__arrow" />',
+	slidesToShow: 3,
+	centerMode: true,
+	centerPadding: 0
+})
+//запуск видео при  прокрутке
+function togglePresentationVideo(entries, observer) {
+  var element = entries[0].target;
+	if(entries[0].isIntersecting){
+		element.play();
+	}else{
+		element.pause();
+	}
+	$('.presentation video').not(element).each(function(){
+		this.pause();
+	})
+};
+
+$('.presentation video').each(function(){
+	var videoObserver = new IntersectionObserver(togglePresentationVideo,{threshold: 1});
+	videoObserver.observe(this);
 })

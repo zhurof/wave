@@ -65,6 +65,26 @@ p
 	margin: 0 0 1.25em
 	&:last-child
 		margin: 0
+blockquote
+	margin: 0
+	position: relative
+	padding: 0 45px 0 50px
+	font-style: italic
+	&:before,
+	&:after
+		font-size: 70px
+		line-height: .5
+		display: inline-block
+		position: absolute
+		font-style: normal
+	&:before
+		content: '«'
+		top: 0
+		left: 0
+	&:after
+		content: '»'
+		bottom: 0
+		right: 0
 
 *:focus
 	outline: none
@@ -182,6 +202,7 @@ h4
 h5
 	font-size: 20px
 h6
+	font-size: 15px
 	text-transform: uppercase
 	color: #9DC8FF
 	letter-spacing: .64/16*1em
@@ -464,6 +485,9 @@ table
 				background-color: $blue
 .catalog
 	padding: 13px 0 10px
+	&__head
+		text-align: center
+		margin: 40px 0 30px
 .banner-card
 	display: flex
 	flex-direction: column
@@ -586,6 +610,11 @@ table
 		transition: all .3s ease
 		&:before
 			content: '\e910'
+		&--corner
+			left: auto
+			top: auto
+			bottom: 30px
+			right: 30px
 	&--playing &__btn
 		opacity: 0
 		pointer-events: none
@@ -956,7 +985,7 @@ table
 			flex: 1 1 auto calc(100% - 47px)
 .tabs
 	position: relative
-	padding: 20px 0
+	padding: 20px 0 0
 	&__head
 		display: flex
 		flex-wrap: wrap
@@ -964,12 +993,15 @@ table
 		align-items: center
 		text-align: center
 		position: sticky
-		z-index: 2
+		z-index: 3
 		top: 10px
+		&--bottom-space
+			margin-bottom: 20px
 	&__trigger
 		display: inline-block
 		font: normal normal 16px/47px Roboto,sans-serif
-		padding: 0 20px
+		padding: 0 10px
+		margin: 0 10px
 		white-space: nowrap
 		max-width: 100%
 		overflow: hidden
@@ -977,13 +1009,16 @@ table
 		background-color: #fff
 		border-radius: 10px
 		cursor: pointer
-		transition: box-shadow .3s ease,color .3s ease
+		transition: box-shadow .3s ease,color .3s ease,padding .3s ease,margin .3s ease
+		user-select: none
 		&--active
 			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1)
 			color: $blue
 			font-weight: bold
 			position: relative
 			z-index: 1
+			padding: 0 20px
+			margin: 0
 	&__item
 		display: none
 .description
@@ -1027,9 +1062,298 @@ table
 			margin: 10px 20px 0 0
 	&__text
 		flex: 0 1 calc(100% - 400px)
-		
-		
-	
+.good-banner
+	background: url(../img/angle-blot.svg) no-repeat top left, url(../img/blue-blot.svg) no-repeat left 50% bottom 40px #F8F8F8
+	padding: 96px 0 16px
+	h6
+		font-size: 16px
+		margin: 0 0 .5em
+	h1
+		line-height: 57/54*1
+		margin: 0 0 .18em
+	h5
+		font-family: inherit
+		margin: 0 0 1.7em
+	&__text
+		margin: 0 0 37px
+		text-align: center
+.app-block
+	background: url(../img/phone.png) no-repeat left calc(50% + 250px) bottom, url(../img/red-bg.jpg) no-repeat center/cover
+	padding: 85px 0 53px
+	color: #fff
+	line-height: 26/16*1
+	&__text
+		h6
+			margin: 0 0 .6em
+			color: inherit
+		h3
+			margin: 0 0 .9em
+			line-height: 42/34*1
+		a
+			display: inline-block
+			margin: 0 10px 10px 0
+			img
+				display: block
+		p:empty:not(:last-child)
+			margin-bottom: 2.7em
+.video-banner
+	background: 
+		size: cover
+		position: center
+		color: rgba(7,36,60,1)
+		blend-mode: overlay
+	color: #fff
+	text-align: center
+	font-size: 20px
+	line-height: 1.5
+	padding: 187px 0 198px
+	&__text
+		max-width: 820px
+		margin: 0 auto
+		h2
+			line-height: 1
+			margin: 0 0 .4em
+.video-link
+	display: inline-block
+	font-size: 20px
+	i
+		font-size: 53px
+		margin-left: .3em
+		vertical-align: middle
+.review-card
+	width: 356px
+	margin: 0 25px 50px
+	position: relative
+	background-color: #F1F1F1
+	line-height: 26/16*1
+	padding: 29px 15px 35px 29px
+	text-align: left
+	&.slick-slide
+		margin-bottom: 0
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 38px
+			left: 100%
+			border-bottom: 36px solid #F1F1F1
+			border-right: 24px solid transparent
+	&.slick-center
+		&:after
+			left: auto
+			right: 100%
+			transform: scaleX(-1)
+		& ~ .slick-slide:after
+			left: auto
+			right: 100%
+			transform: scaleX(-1)
+	&__footer
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		margin: 45px 0 0
+	&__icon
+		width: 40px
+		flex: 0 0 auto
+		margin-right: 11px
+	&__author
+		font-weight: bold
+		font-family: Roboto,sans-serif
+		margin-right: 10px
+	&__source
+		margin-left: auto
+.reviews
+	text-align: center
+	padding: 97px 0 98px
+	h3
+		line-height: 40/34*1
+		margin: 0 0 42/34*1em
+	&__brands
+		justify-content: center
+		max-width: 880px
+		margin: 0 auto 37px
+	&__brand
+		display: block
+		margin: 0 5px 10px
+		width: 281px
+		max-width: 100%
+		height: 148px
+		background-color: #F1F1F1
+		position: relative
+		img
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			max-width: calc(100% - 40px)
+			max-height: calc(100% - 20px)
+	&__slider
+		overflow: hidden
+		.slick-list
+			margin: 0 -25px
+	&__arrow
+		&.prev
+			left: calc(50% - 235px)
+		&.next
+			right: calc(50% - 235px)
+.bg-banner
+	background: 
+		size: cover
+		position: center bottom
+		repeat: no-repeat
+	padding: 60px 0 calc(70% - 300px)
+	text-align: center
+	&--dark
+		color: #fff
+	&__text
+		max-width: 800px
+		margin: 0 auto
+		line-height: 1.5
+	h3
+		line-height: normal
+		margin: 0 0 .27em
+		strong
+			display: block
+.pic-block
+	padding: 85px 0 110px
+	background: 
+		position: left top
+		repeat: no-repeat
+		color: #EEF0F8
+	&__text
+		width: 50%
+		margin-left: auto
+		font-size: 20px
+		line-height: 1.5
+		padding-left: 100px
+	h2
+		line-height: 54/50*1
+		strong
+			display: block
+	small
+		font-size: .8em
+.presentation
+	padding: 74px 0 48px
+	background-color: #F8F8F8
+	&__head
+		text-align: center
+	h6
+		margin: 0 0 .7em
+	h2
+			line-height: 1
+			margin: 0
+	h3
+		line-height: normal
+	&__item		
+		padding: 90px 0
+		background: url(../img/presentation/0.svg) no-repeat calc(50% + 152px) 50%
+		&:first-child
+			padding-top: 73px
+		&:nth-child(3n+2)
+			background-image: url(../img/presentation/1.svg)
+			background-position-x: calc(50% + 292px)
+		&:nth-child(3n)
+			background-image: url(../img/presentation/2.svg)
+		&-wrapper
+			display: flex
+			align-items: flex-start
+	&__text
+		flex: 0 1 380px
+		margin: auto 66px auto 0
+		font-size: 20px
+		line-height: 1.5
+	&__video
+		flex: 0 1 calc(100% - 446px)
+		height: 412px
+.charge
+	background: linear-gradient(to bottom,#F8F8F8,#f1f1f3)
+	padding: 70px 0 0
+	&__text
+		text-align: center
+		max-width: 750px
+		margin: auto
+		font-size: 20px
+		line-height: 1.5
+		position: relative
+		z-index: 2
+	&__bg
+		display: block
+		width: 100%
+		margin-top: -10%
+	h6
+		margin: 0 0 .6em
+	h2
+		line-height: 1
+		margin: 0 0 .45em
+	ul
+		+unlist
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		>li
+			flex-basis: 205px
+			margin: 0 20px 20px
+			strong
+				color: $blue
+				display: block
+				font-family: Roboto,sans-serif
+				font-size: 34px
+				line-height: 42/34*1
+			em
+				font-size: 54/34*1em
+				line-height: 42/34*1
+				font-style: inherit
+.advantages
+	padding: 86px 0 70px
+	background: url(../img/angle-blot-2.svg) no-repeat left top,url(../img/angle-blot-3.svg) no-repeat right bottom
+	&__wrapper
+		display: flex
+		align-items: flex-start
+	&__img
+		width: calc(50% + 20px)
+	&__text
+		flex-basis: calc(50% - 20px)
+		padding-left: 89px
+		font-size: 20px
+		line-height: 1.5
+		h2,h3
+			line-height: normal
+		h4
+			font-size: 34px
+			font-weight: bold
+			color: $blue
+			line-height: 42/34*1
+			margin: 0
+			strong
+				font-size: 54/34*1em
+				line-height: 54/42*1
+		h6
+			margin: 0 0 .3em
+		p
+			margin: 0 0 .7em
+			&:last-child
+				margin-bottom: 0
+		blockquote
+			margin-right: 40px
+.test-drive
+	padding: 23px 0 100px
+	background: url(../img/free-blot-1.svg) no-repeat calc(50% - 510px) 207px, url(../img/free-blot-2.svg) no-repeat calc(50% + 332px) 100%
+	h2
+		line-height: normal
+		margin: 0 0 .4em
+	h6
+		margin: 0 0 .2em
+	h5
+		font-family: inherit
+		line-height: 1.5
+	&__text
+		max-width: 800px
+		text-align: center
+		margin: 0 auto 50px
+	&__video
+		max-width: 1062px
+		margin: 0 auto
 /*ПОДВАЛ*/
 .footer
 	background: url(../img/footer.svg) no-repeat center top/100% 62px,linear-gradient(to bottom,transparent 62px,$darkblue 62px)
