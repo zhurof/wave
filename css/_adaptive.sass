@@ -151,6 +151,29 @@
 	.description
 		&__text
 			padding-right: 40px
+	.good-banner
+		background-size: auto,90% auto
+	.bg-banner
+		padding-bottom: 70%
+	.pic-block
+		padding: 60px 0
+		background-size: 60% auto
+		&__text
+			padding-left: 40px
+	.presentation
+		&__item
+			background-size: auto 100%
+		&__text
+			margin-right: 40px
+		&__video
+			height: auto
+	.advantages
+		background-size: 40% auto,auto
+		&__img
+			width: 40%
+		&__text
+			flex-basis: 60%
+		
 @media(max-width:991px)
 	.banner
 		display: none
@@ -239,6 +262,34 @@
 			padding: 0
 			h4
 				flex-basis: 40%
+	.presentation
+		&__item
+			padding: 30px 0
+			&:first-child
+				padding-top: 50px
+			&-wrapper
+				display: block
+		&__text
+			margin: 0 0 20px
+	.charge
+		padding-top: 30px
+		ul
+			justify-content: center
+	.advantages
+		padding: 45px 0
+		&__wrapper
+			display: block
+		&__img
+			width: auto
+			display: block
+			margin: 0 auto 20px
+			max-height: 360px
+		&__text
+			padding: 0
+	.test-drive
+		padding-bottom: 40px
+	.reviews
+		padding: 60px 0 45px
 	.footer
 		background: url(../img/footer.svg) no-repeat center top/100% 4.54vw, linear-gradient(to bottom, transparent 4.2vw, #2E5577 4.2vw)
 		padding-top: 4.54vw
@@ -265,11 +316,11 @@
 			padding: 10px 0
 @media(max-width:767px)
 	h1
-		font-size: 40px
-	h2
 		font-size: 36px
-	h3
+	h2
 		font-size: 32px
+	h3
+		font-size: 28px
 	h4
 		font-size: 24px
 	h5
@@ -330,17 +381,51 @@
 			h4
 				margin: 0 0 .5em
 	.tabs
+		padding-top: 20px
 		&__head
 			position: static
 			display: block
 			padding: 0 20px
 		&__trigger
 			display: block
+			margin: 0
 	.chars
 		&__item
 			display: block
 			h4
 				margin: 0 0 .5em
+	.good-banner
+		padding-top: 60px
+		background-position-y: 0, calc(100% - 70px)
+	.video-banner
+		font-size: inherit
+		padding: 60px 0
+	.pic-block
+		padding: 30px 0
+		background-size: 0
+		&__text
+			width: auto
+			padding: 0
+			font-size: inherit
+	.bg-banner
+		background-color: rgba(255,255,255,.7)
+		background-blend-mode: lighten
+		&--dark
+			background-color: #000
+			background-blend-mode: normal
+	.presentation
+		padding: 50px 0 30px
+		&__item
+			padding: 20px 0
+	.app-block
+		background-position: center bottom,center
+		background-size: 80% auto,cover
+		padding-bottom: 60%
+	.reviews
+		&__brand
+			width: 180px
+	.test-drive
+		background-size: auto,auto 50%
 	.footer
 		&__column
 			&:nth-child(n+2)
@@ -364,4 +449,17 @@
 			padding: 30px 20px
 		&__section
 			padding: 30px 20px
+	.presentation
+		&__text
+			font-size: inherit
+	.advantages
+		&__text
+			font-size: inherit
+			h4
+				font-size: 1.5em
+	.charge
+		&__text
+			font-size: inherit
+			ul>li strong
+				font-size: 1.5em
 	

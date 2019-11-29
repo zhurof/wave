@@ -149,8 +149,11 @@ $('.tabs__trigger').click(function(){
 		this.pause();
 	})
 	//в табах может быть овердохуя контента, а переключатели с position: sticky поэтому при необходимости крутим в начало
-	console.log(tabs[0].getBoundingClientRect())
-	$('html,body').scrollTop(tabsTop);
+	if((scrollY > tabsTop) && innerWidth > 767){
+		$('html,body').animate({
+			scrollTop: tabsTop
+		},500);
+	}	
 })
 //
 $('.reviews__slider').slick({
@@ -159,19 +162,35 @@ $('.reviews__slider').slick({
 	nextArrow: '<span class="slick-arrow next reviews__arrow" />',
 	slidesToShow: 3,
 	centerMode: true,
-	centerPadding: 0
+	centerPadding: 0,
+	responsive: [
+		{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2,
+				
+			}
+		},{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+				centerMode: false,
+				adaptiveHeight: true
+			}
+		}
+	]
 })
 //запуск видео при  прокрутке
 function togglePresentationVideo(entries, observer) {
   var element = entries[0].target;
 	if(entries[0].isIntersecting){
 		element.play();
+		$('.presentation video').not(element).each(function(){
+			this.pause();
+		})
 	}else{
 		element.pause();
-	}
-	$('.presentation video').not(element).each(function(){
-		this.pause();
-	})
+	}	
 };
 
 $('.presentation video').each(function(){
